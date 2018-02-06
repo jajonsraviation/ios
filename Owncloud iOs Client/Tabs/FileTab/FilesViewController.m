@@ -3668,8 +3668,6 @@
     }
 }
 
-<<<<<<< HEAD
-=======
 -(void)navigateTo:(FileDto *)file {
     
     _selectedFileDto = file;
@@ -3702,5 +3700,4 @@
     }
 }
 
->>>>>>> b483dc66... fix for open photos and files  inside the app and the root file bug
 @end
