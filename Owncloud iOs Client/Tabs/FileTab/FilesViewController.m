@@ -3334,6 +3334,7 @@
                             waitUntilDone:YES];
   
      dispatch_async(dispatch_get_main_queue(), ^{
+         [self endLoading];
          [_tableView deselectRowAtIndexPath:[_tableView indexPathForSelectedRow] animated:YES];
      });
 }
@@ -3698,6 +3699,7 @@
         app.detailViewController.sortedArray=_sortedArray;
         [app.detailViewController handleFile:file fromController:fileListManagerController andIsForceDownload:YES];
     }
+    [self endLoading];
 }
 
 -(void)scrollToFile:(FileDto *)file {
@@ -3718,6 +3720,7 @@
 
     CustomCellFileAndDirectory *cell = [self.tableView cellForRowAtIndexPath:indexpathOfFile];
     [cell blinkWithColor:[UIColor yellowColor] count:6];
+    [self endLoading];
 
 }
 
